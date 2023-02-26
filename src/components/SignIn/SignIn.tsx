@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import firebase from 'firebase/app';
 import { useAuth, AuthCheck } from 'reactfire';
 import 'firebase/auth';
-import { Input } from '../SharedComponents';
+import { Input } from '../SharedComponents/Input';
 import { Container, Button, makeStyles, Typography, Snackbar } from '@material-ui/core';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';

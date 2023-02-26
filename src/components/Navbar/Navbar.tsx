@@ -3,16 +3,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { url } from 'inspector';
-import Digits from '../../assets/images/digitlogo.png';
+import skysky from '../../assets/images/skyrim.png';
 import { AuthCheck } from 'reactfire';
 
 
 
-const useStyles= makeStyles({
-    logo:{
-        content: `url(${Digits})`,
-        maxWidth: '20%',
-        height: "auto",
+const useStyles = makeStyles({
+    logo: {
+        content: `url(${skysky})`,
+        maxWidth: '8%',
+        height: 'auto'
     },
     navlogo: {
         display: 'flex',
@@ -33,7 +33,7 @@ const useStyles= makeStyles({
         flexDirection: 'row',
     },
     navbar: {
-        backgroundColor: '#003155',
+        backgroundColor: 'black',
         zIndex: 1,
         borderBottom: '1px solid grey',
     },
@@ -63,7 +63,7 @@ const useStyles= makeStyles({
         paddingRight: '10px',
         paddingLeft: '10px'
     },
-})
+});
 
 export const Navbar =() => {
 
@@ -86,17 +86,12 @@ export const Navbar =() => {
                     }>
                         <li>
                             <Button>
-                                <Link to= '/Phonebook' className= {`${classes.navbarItem} ${classes.psides}`}>My Phonebook</Link>
+                                <Link to= '/about' className= {`${classes.navbarItem} ${classes.psides}`}>Your Purpose</Link>
                             </Button>
                         </li>
                         <li>
                             <Button>
-                                <Link to= '/Contact' className= {`${classes.navbarItem} ${classes.psides}`}>Contact us</Link>
-                            </Button>
-                        </li>
-                        <li>
-                            <Button>
-                                <Link to= '/About' className= {`${classes.navbarItem} ${classes.psides}`}>About Us</Link>
+                                <Link to= '/alchemy' className= {`${classes.navbarItem} ${classes.psides}`}>Alchemical Research</Link>
                             </Button>
                         </li>
                     </AuthCheck>

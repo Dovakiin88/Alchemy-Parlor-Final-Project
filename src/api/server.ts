@@ -1,8 +1,8 @@
-let token = 'fdf0f1510cb0604f2ad90653b1ce9bede6570ce02474b16b'
+let token = '8a96a19750df65b572f4f68a145a2bf767e235adc7cd8684'
 
 export const server_calls = {
     get: async () => {
-        const response = await fetch(`https://common-cream-quill.glitch.me/api/contacts`,{
+        const response = await fetch(`https://shore-horse-singularity.glitch.me/api/potions`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ export const server_calls = {
     },
 
     create: async(data: any = {}) => {
-        const response = await fetch(`https://common-cream-quill.glitch.me/api/contacts`,{
+        const response = await fetch(`https://shore-horse-singularity.glitch.me/api/potions`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ export const server_calls = {
         return await response.json()
     },
     update: async (id:string, data:any = {}) => {
-        const response = await fetch(`https://common-cream-quill.glitch.me/api/contacts/${id}`, {
+        const response = await fetch(`https://shore-horse-singularity.glitch.me/api/potions/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ export const server_calls = {
         });
     },
     delete: async(id:string) => {
-        const response = await fetch(`https://common-cream-quill.glitch.me//api/contacts/${id}`,{
+        const response = await fetch(`https://shore-horse-singularity.glitch.me/api/potions/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

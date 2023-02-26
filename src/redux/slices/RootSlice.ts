@@ -6,17 +6,15 @@ const RootSlice= createSlice({
     name: 'root',
     initialState: {
         name:'Name',
-        email: 'Email',
-        phone_number: 'Phone Number',
-        address: 'Address'
+        class: 'Class of Potion',
+        description: 'Description',
     },
     reducers: {
-        choosename: (state, action) => { state.name = action.payload },
-        chooseEmail: (state, action) => { state.email = action.payload },
-        choosePhone: (state, action) => { state.phone_number = action.payload },
-        chooseAddress:(state, action) => { state.address = action.payload }
+        choosePname: (state, action) => { state.name = action.payload },
+        choosePclass: (state, action) => { state.class = action.payload },
+        choosePdescription: (state, action) => { state.description = action.payload }
     }
 })
 
 export const reducer = RootSlice.reducer;
-export const { choosename, chooseEmail, chooseAddress, choosePhone } = RootSlice.actions;
+export const {  choosePname, choosePclass, choosePdescription } = RootSlice.actions;

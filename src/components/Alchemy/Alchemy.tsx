@@ -30,9 +30,9 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import clsx from 'clsx';
 import {  RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
 import { DataTable } from '../DataTable';
-import { ContactForm } from '../ContactForm';
+import { PotionForm } from '../PotionForm';
    
-interface PhonebookProps {
+interface PotionProps {
     history: RouteComponentProps['history'];
     location: RouteComponentProps['location'];
     match: RouteComponentProps['match'];
@@ -151,34 +151,39 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     toolbar: {
         display: 'flex',
-        backgroundColor: '#003155',
+        backgroundColor: '#000000',
         color: 'white',
-        fontFamily: "Georgia, Times New Roman, Times, serif",
+        fontFamily: "Papyrus, fantasy",
     },
     toolbar_button: {
         marginLeft: 'auto',
         color: 'white',
-        fontFamily: "Georgia, Times New Roman, Times, serif",
+        fontFamily: "Papyrus, fantasy",
     },
     margin_top: {
         marginTop: '50px',
     },
     font: {
-        fontFamily: "Georgia, Times New Roman, Times, serif",
+        fontFamily: "Papyrus, fantasy",
+        color: '#FFFFFF'
     },
     leftMargin: {
         marginLeft: '240px',
     },
-}))
+    backgroundaz:{
+        backgroundColor: '#FBCEB1'
+    },
+}));
 
 
-export const Phonebook= withRouter((  props: PhonebookProps) => {
+export const Alchemy = withRouter((  props: PotionProps) => {
 
     console.log(props);
     const {history} = props;
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = useState(false);
+    
     const [dialogOpen, setDialogOpen] = useState(false)
 
     const handleDrawerOpen = () => {
@@ -207,17 +212,13 @@ export const Phonebook= withRouter((  props: PhonebookProps) => {
             onclick: () => history.push('/signin')
         },
         {
-            text: 'Contacts', 
-            onclick: () => history.push('/contact')
-        },
-        {
             text: 'About', 
             onclick: () => history.push('/about')
         },
     ];
 
   return (
-    <div className={ `${classes.root} ${classes.column}`}>
+    <div className={ `${classes.root} ${classes.column} ${classes.backgroundaz}`}>
         <CssBaseline />
         <AppBar position="fixed" className= {clsx(classes.appBar, {[classes.appBarShift]: open})}>
             <Toolbar className= {classes.toolbar}>
@@ -225,15 +226,15 @@ export const Phonebook= withRouter((  props: PhonebookProps) => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant='h6' className= {classes.font} noWrap>
-                    My Phonebook
+                    Alchemy Parlor
                 </Typography>
-                <Button className= {classes.toolbar_button} onClick= {handleDiaglogClickOpen}>Create New Contact</Button>
+                <Button className= {classes.toolbar_button} onClick= {handleDiaglogClickOpen}>Create New Potion</Button>
 
                 <Dialog open= {dialogOpen} onClose={handleDiaglogClickclose} aria-labelledby="form-dialog-title">
-                    <DialogTitle id="form-dialog-title">Add New Contact</DialogTitle>
+                    <DialogTitle id="form-dialog-title">Add New Potion</DialogTitle>
                     <DialogContent>
                         <DialogContentText></DialogContentText>
-                        <ContactForm />
+                        <PotionForm />
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleDiaglogClickclose} color="primary">Cancel</Button>

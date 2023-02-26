@@ -3,15 +3,20 @@ import { server_calls } from '../api'
 
 export const useGetData = () => {
   
-    const[contactData, setData] = useState<[]>([])
+    const[potionData, setData] = useState<[]>([])
 
-    async function handleDataFetch(){
+    async function handleDataFetch() {
         const result = await server_calls.get();
+        setData(result)
     }
+    
+  {/*  async function handleDataFetch(){
+        const result = await server_calls.get();
+    }*/}
 
     useEffect(  () =>{
         handleDataFetch();
     }, [])
 
-    return {contactData,getData: handleDataFetch}
+    return {potionData,getData: handleDataFetch}
 }

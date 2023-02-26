@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Navbar } from '../../components/Navbar';
+import alchemy from '../../assets/images/alchemy1.png'
 import { Link } from 'react-router-dom';
 
 
@@ -10,27 +11,74 @@ interface Props {
 }
 
 const useStyles = makeStyles({
-    background:{
-        backgroundImage: `linear-gradient(rgba(0, 49, 85) 0%, rgba(121, 147, 163, 1) 47%, rgba(249, 249, 249, 1) 100%)`,
-        width: '100%',
-        height: '90%',
-        backgroundPosition: 'center',
-        position: 'absolute',
-        zIndex: -1,
+    header: {
+      color: 'green'
     },
-    main_text:{
-        textAlign: 'center',
-        position: 'relative',
-        top: '40%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        color: 'white',
-
+    row: {
+      display: 'flex',
+      flexDirection: 'row'
     },
-    button_text:{
-        color: 'white',
-        textDecoration: 'none',
+    font: {
+      color: 'white',
+      textAlign: 'center',
+      position: 'relative'
     },
+    center: {
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    column: {
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    even_spread: {
+      justifyContent: 'space-evenly'
+    },
+    reduce_margin: {
+      margin: '-10px'
+    },
+    backgrounda:{
+      backgroundColor: 'black'
+    },
+    backgroundb:{
+      backgroundImage: `radial-gradient(circle , rgba(0,0,0,1) 0%, rgba(65,9,9,1), 50%, rgba(0,0,0,1) 100%)`,
+      backgroundPosition: 'center',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      zIndex: -1
+    },
+    paddinga: {
+      padding: '5px'
+    },
+    paddingb:{
+      padding: '10px'
+    },
+    top_padding:{
+      paddingTop: '5px'
+    },
+    rightpadding:{
+      paddingRight: '10px'
+    },
+    reduce:{
+      marginBottom: '-20px',
+      marginTop: '30px'
+    },
+    main_text: {
+      textAlign: 'center',
+      position: 'relative',
+      top: '45%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      color: 'white',
+    },
+    button_text: {
+      color: 'white',
+      textDecoration: 'none',
+  },
+  topmargin:{
+    marginTop: '10px'
+  }
 });
 
 export const Home = ( props: Props) => {
@@ -40,12 +88,13 @@ export const Home = ( props: Props) => {
   return (
     <>
         {< Navbar /> }
-        <div className= {`${classes.background}`}>
+        <div className= {`${classes.backgroundb}`}>
             <div className= {classes.main_text}>
                 <h1>{props.title}</h1>
                 <Button>
-                    <Link to='/phonebook' className= {classes.button_text}> Take me to My Phonebook</Link>
+                    <Link to='/alchemy' className= {classes.button_text}> Enter the Alchemy Parlor</Link>
                 </Button>
+                NOTE ADD PIC
             </div>
         </div>
     </>
