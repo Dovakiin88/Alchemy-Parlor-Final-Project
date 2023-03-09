@@ -13,7 +13,7 @@ interface PotionFormProps{
 
 interface PotionState{
   name: string;
-  class: string;
+  potion_class: string;
   description: string;
 };
 
@@ -30,11 +30,14 @@ export const PotionForm = (props:PotionFormProps) => {
       server_calls.update(props.id!, data);
       console.log(`Updated:${data} ${props.id}`);
       console.log(data);
+      console.log(data.name)
+      console.log(data.potion_class)
+      console.log(data.description)
       setTimeout( () => {window.location.reload()}, 1000);
       event.target.reset();
     }else{
       dispatch(choosePname(data.name));
-      dispatch(choosePclass(data.class));
+      dispatch(choosePclass(data.potion_class));
       dispatch(choosePdescription(data.description));
       server_calls.create(store.getState());
       setTimeout( () => {window.location.reload()}, 1000);
@@ -48,8 +51,8 @@ export const PotionForm = (props:PotionFormProps) => {
           <Input {...register('name')} name='name' placeholder='Name'/>
         </div>
         <div>
-          <label htmlFor="class">Class?</label>
-          <Input {...register('class')} name='class' placeholder='Class'/>
+          <label htmlFor="potion_class">Class?</label>
+          <Input {...register('potion_class')} name='potion_class' placeholder='Class'/>
         </div>
         <div>
           <label htmlFor="description">Description</label>

@@ -13,7 +13,7 @@ import { PotionForm } from '../PotionForm'
 const columns:GridColDef[] = [
   {field: 'id', headerName:'ID', width:90, hide: true},
   {field: 'name', headerName: 'Potion Name', flex:1},
-  {field: 'class', headerName: 'Potion Type', flex: 1},
+  {field: 'potion_class', headerName: 'Potion Type', flex: 1},
   {field: 'description', headerName: 'Description', flex: 2},
 ];
 

@@ -6,12 +6,12 @@ const RootSlice= createSlice({
     name: 'root',
     initialState: {
         name:'Name',
-        class: 'Class of Potion',
+        potion_class: 'Class of Potion',
         description: 'Description',
     },
     reducers: {
         choosePname: (state, action) => { state.name = action.payload },
-        choosePclass: (state, action) => { state.class = action.payload },
+        choosePclass: (state, action) => { state.potion_class = action.payload },
         choosePdescription: (state, action) => { state.description = action.payload }
     }
 })
