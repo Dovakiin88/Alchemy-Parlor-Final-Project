@@ -112,7 +112,7 @@ export const About =() => {
 
         <div className={`${classes.width70}`}>
           <div>
-            <h2 className={`${classes.textalignment}`}>Most effect ingrediens for potions</h2>
+            <h2 className={`${classes.textalignment}`}>Most effective ingredients for potions</h2>
           </div>
           <div className={`${classes.textalignment} ${classes.martop}`}>
             <ul className={`${classes.center} ${classes.ul}`}>
@@ -133,7 +133,7 @@ export const About =() => {
           </div>
           <div className={`${classes.center} ${classes.martop2}`}>
             <div className={`${classes.textalignment}`}>
-              <h3>Quick Potion Recipies for the Dovakiin on the go</h3>
+              <h3>Quick Potion Recipies for the Dovakiin on the go!</h3>
             </div>
             <ul className={`${classes.martop}`}>
               <li>Invisibility Potion: Chaurus Eggs, Vampire Dust, Luna moth wing</li>

@@ -33,6 +33,7 @@ export const server_calls = {
 
         return await response.json()
     },
+
     update: async (id:string, data:any = {}) => {
         const response = await fetch(`https://shore-horse-singularity.glitch.me/api/potions/${id}`, {
             method: 'POST',
@@ -43,6 +44,7 @@ export const server_calls = {
             body: JSON.stringify(data)
         });
     },
+
     delete: async(id:string) => {
         const response = await fetch(`https://shore-horse-singularity.glitch.me/api/potions/${id}`,{
             method: 'DELETE',

@@ -78,6 +78,10 @@ const useStyles = makeStyles({
   },
   topmargin:{
     marginTop: '10px'
+  },
+  image:{
+    width: '10px',
+    height: '10px'
   }
 });
 
@@ -88,13 +92,14 @@ export const Home = ( props: Props) => {
   return (
     <>
         {< Navbar /> }
-        <div className= {`${classes.backgroundb}`}>
+        <div className= {`${classes.backgroundb} ${classes.column}`}>
             <div className= {classes.main_text}>
                 <h1>{props.title}</h1>
                 <Button>
                     <Link to='/alchemy' className= {classes.button_text}> Enter the Alchemy Parlor</Link>
                 </Button>
-                NOTE ADD PIC
+                <div> </div> <br />
+                <h3>You may enter. Create potions that will assist in your ascention to glory</h3>
             </div>
         </div>
     </>

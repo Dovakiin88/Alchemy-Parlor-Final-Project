@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         position: 'absolute',
         justifyContent: 'center',
         alignItems: 'center',
-        fontFamily: "Georgia, Times New Roman, Times, serif",
+        fontFamily: "Papyrus, fantasy",
     },
     h3: {
         display: 'flex',
@@ -121,9 +121,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
+        fontFamily: 'Papyrus, fantasy',
+        fontSize: 'large'
     },
     drawerPaper: {
         width: drawerWidth,
+        backgroundColor: '#a14f0f'
     },
     drawerHeader:{
         display: 'flex',
@@ -173,6 +176,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     backgroundaz:{
         backgroundColor: '#FBCEB1'
     },
+    drawerbg:{
+        backgroundColor: '#690303'
+    },
+    drawerbg2:{
+        backgroundColor: '#af540e'
+    }
 }));
 
 
@@ -243,13 +252,14 @@ export const Alchemy = withRouter((  props: PotionProps) => {
                 </Dialog>
             </Toolbar>
         </AppBar>
-        <MUIDrawer className= {classes.drawer} variant="persistent" anchor='left' open={open} classes= {{paper: classes.drawerPaper,}}>
-            <div className= {classes.drawerHeader}>
+        <MUIDrawer className= {`${classes.drawer} `} variant="persistent" anchor='left' open={open} classes= {{paper: classes.drawerPaper,}}>
+            <div className= {`${classes.drawerHeader} ${classes.drawerbg}`}>
                 <IconButton onClick={handleDrawerClose}>
                     {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                 </IconButton>
             </div>
             <Divider />
+            <div></div>
             <List>
                 {itemsList.map((item, index) => {
                     const { text, onclick } = item;
