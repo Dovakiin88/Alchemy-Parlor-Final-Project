@@ -48,11 +48,11 @@ export const PotionForm = (props:PotionFormProps) => {
           <Input {...register('name')} name='name' placeholder='Name'/>
         </div>
         <div>
-          <label htmlFor="email">Class?</label>
+          <label htmlFor="class">Class?</label>
           <Input {...register('class')} name='class' placeholder='Class'/>
         </div>
         <div>
-          <label htmlFor="phone_number">Description</label>
+          <label htmlFor="description">Description</label>
           <Input {...register('description')} name='description' placeholder='Description'/>
         </div>
         <Button type='submit'>Affirm</Button>
